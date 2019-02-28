@@ -1,9 +1,5 @@
 const assert = require('assert')
 
-before(async function() {
-    Object.assign(global, new (require('@dollarshaveclub/cloudworker'))(require('fs').readFileSync('worker.js', "utf8")).context);
-});
-
 describe('Worker Test', async function() {
 
     it('returns a body that says hello', async function () {
