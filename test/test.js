@@ -1,21 +1,7 @@
-var assert = require('assert')
-
-let Headers, Request, Response, fetch, URL, handleRequest, addition;
+const assert = require('assert')
 
 before(async function() {
-
-    var fs = require('fs')
-    var Cloudworker = require('@dollarshaveclub/cloudworker');
-    var cw = new Cloudworker(fs.readFileSync('worker.js', "utf8"));
-
-    Headers = cw.context.Headers;
-    Request = cw.context.Request;
-    Response = cw.context.Response;
-    fetch = cw.context.fetch;
-    URL = cw.context.URL;
-    handleRequest = cw.context.handleRequest;
-    addition = cw.context.addition;
-
+    Object.assign(global, new (require('@dollarshaveclub/cloudworker'))(require('fs').readFileSync('worker.js', "utf8")).context);
 });
 
 describe('Worker Test', async function() {
