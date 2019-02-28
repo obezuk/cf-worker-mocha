@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "devDependencies": {
+    "@dollarshaveclub/cloudworker": "0.0.11",
+    "mocha": "^6.0.2"
+  }
+}
