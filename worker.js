@@ -9,4 +9,3 @@ async function addition(a, b) {
 async function handleRequest(request) {
   return new Response('Hello World!');
 }
-

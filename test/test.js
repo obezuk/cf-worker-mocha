@@ -14,5 +14,5 @@ describe('Worker Test', async function() {
         var res = await addition(1, 1);
         assert.equal(res, 2);
     });
-
+    
 })
